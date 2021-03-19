@@ -1,15 +1,31 @@
+import React, { useState, useEffect } from "react";
+import { Router, Link } from "@reach/router";
 import './App.css';
-import Book from './components/Book/Book.js';
 import Add from './components/Add/Add';
+import Inventory from './components/Inventory.js';
 
 function App() {
+  const [books, setBooks] = useState([]);
+
+  useEffect(()=>{
+    fetch("https://clockworkjava.pl/books.php")
+    .then(response => {
+        return response.json();
+    })
+    .then(data => {
+        setBooks(data)
+    });       
+},[])
+
   return (
     <div>
-      <h1>React bookstore</h1>
-      <Add/>
-      <Book title="Straż! Straż!" author="Terry Prachett" publicationDate="1989" genre="Fantastyka" audience="Młodzież"/>
-      <Book title="Dwie wieże" author="J. R. R. Tolkien" publicationDate="1954" genre="Fantastyka" audience="Młodzież"/>
-      <Book title="Komnata Tajemnic" author="J. K. Rowling" publicationDate="1998" genre="Fantastyka" audience="Młodzież"/>
+      <Link to="/">
+        <h1>React bookstore</h1>
+      </Link>
+      <Router>
+        <Add books={books} setBooks={setBooks} path="/admin"/>
+        <Inventory books={books} path="/"/>
+      </Router>
     </div>
   );
 }
