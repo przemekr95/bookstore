@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Router, Link } from "@reach/router";
 import './App.css';
 import Add from './components/Add/Add';
-import Inventory from './components/Inventory.js';
+import Inventory from './components/Inventory/Inventory.js';
 import { ADD_BOOK } from "./store/reducer.js";
 
 function App() {
@@ -23,9 +23,9 @@ function App() {
 },[])
 
   return (
-    <div>
-      <Link to="/">
-        <h1>React bookstore</h1>
+    <div className="wrapper">
+      <Link className="header" to="/">
+        <h1>Bookstore</h1>
       </Link>
       <Router>
         <Add path="/admin"/>

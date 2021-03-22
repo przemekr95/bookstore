@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,QAAQ,CAAC;EACL,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,MAAM,EAAE,IAAI;EACZ,WAAW,EAAE,MAAM;CAAG;;AAE1B,AAAA,MAAM,CAAC;EACH,MAAM,EAAE,IAAI;EACZ,OAAO,EAAE,QAAQ;EACjB,aAAa,EAAE,GAAG;EAClB,UAAU,EAAE,mBAAmB;CAAG",
+    "sources": [
+        "../components/Add/Add.sass"
+    ],
+    "names": [],
+    "file": "Add.css"
+}

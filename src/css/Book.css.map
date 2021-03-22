@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,AAAA,KAAK,CAAC;EACF,MAAM,EAAE,iBAAiB;EACzB,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,KAAK;EACZ,aAAa,EAAE,GAAG;EAClB,UAAU,EAAE,mBAAmB;EAC/B,UAAU,EAAE,MAAM;CAAG;;AAEzB,AAAA,EAAE,CAAC,IAAI,CAAC;EACJ,KAAK,EAAE,OAAO;CAAG",
     "sources": [
         "../components/Book/Book.sass"
     ],

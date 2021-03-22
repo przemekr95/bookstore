@@ -1,1 +1,14 @@
-/* No CSS *//*# sourceMappingURL=Book.css.map */
+.book {
+  border: 1px solid #0c2461;
+  margin: 10px;
+  width: 500px;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 8px #0c2461;
+          box-shadow: 1px 1px 8px #0c2461;
+  text-align: center;
+}
+
+h3 span {
+  color: #0c2461;
+}
+/*# sourceMappingURL=Book.css.map */

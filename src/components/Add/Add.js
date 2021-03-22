@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import useDropdown from '../useDropdown';
 import InputComponent from '../InputComponent/InputComponent.js';
 import { ADD_BOOK } from '../../store/reducer';
+import './../../css/Add.css';
 
 
 const Add = () =>{ 
@@ -35,8 +36,8 @@ const Add = () =>{
 
 
     return (
-        <div>
-            <form>
+        <>
+            <form className="add-box">
                 <InputComponent 
                     label="Tytuł" 
                     state={title} 
@@ -53,14 +54,11 @@ const Add = () =>{
                     setState={setPublicationDate}
                     type="number"
                 />
-                <br/>
                 <GenreDropdown/>
-                <br/>
                 <AudienceDropdown/>
-                <br/>
                 <button onClick={event => addBook(event)}>Dodaj</button>
             </form>
-        </div>
+        </>
     )
 }
 

@@ -1,0 +1,13 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: #0c2461;
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+    text-decoration: none;
+    letter-spacing: 3px;
+}

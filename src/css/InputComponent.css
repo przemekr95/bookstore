@@ -1,1 +1,23 @@
-/* No CSS *//*# sourceMappingURL=InputComponent.css.map */
+label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 400px;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 8px #0c2461;
+          box-shadow: 1px 1px 8px #0c2461;
+}
+
+input {
+  width: 250px;
+}
+
+select {
+  width: 150px;
+}
+/*# sourceMappingURL=InputComponent.css.map */

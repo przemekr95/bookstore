@@ -1,4 +1,5 @@
 import React from 'react';
+import './../../css/InputComponent.css';
 
 class InputComponent extends React.Component {
 
@@ -15,7 +16,7 @@ class InputComponent extends React.Component {
 
         return(
             <label htmlFor={this.state.id}>
-                {label}
+                {label}:
                 <input 
                     id={this.state.id}
                     type={type} 
