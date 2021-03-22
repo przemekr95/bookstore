@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../components/Book/Book.sass"
+    ],
+    "names": [],
+    "file": "Book.css"
+}

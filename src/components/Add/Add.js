@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
+import { useDispatch } from "react-redux";
 import useDropdown from '../useDropdown';
+import InputComponent from '../InputComponent/InputComponent.js';
+import { ADD_BOOK } from '../../store/reducer';
 
 
-const Add = ({books, setBooks}) =>{ 
+const Add = () =>{ 
 
     const [title, setTitle] = useState("");
     const [author, setAuthor] = useState("");
     const [publicationDate, setPublicationDate] = useState("");
+    const dispatch = useDispatch();
 
 
     const genres = ["Fantastyka", "Horror", "Kryminał"];
@@ -24,29 +28,31 @@ const Add = ({books, setBooks}) =>{
             publicationDate: publicationDate,
             genre: genre,
             audience: audience
-        }
-        const newBooks = [...books, newBook];
-        setBooks(newBooks);
+        };
+        dispatch({type: ADD_BOOK, payload: newBook})
+
     }
 
 
     return (
         <div>
             <form>
-                <label htmlFor="title">
-                    Tytuł
-                    <input id="title" value={title} placeholder="Tytuł" onChange={event => setTitle(event.target.value)}/>
-                </label>
-                <br/>
-                <label htmlFor="author">
-                    Autor 
-                    <input id="author" value={author} placeholder="Autor" onChange={event => setAuthor(event.target.value)}/>
-                </label>
-                <br/>
-                <label htmlFor="publicationDate">
-                    Data publikacji
-                    <input id="publicationDate" value={publicationDate} placeholder="Data publikacji" onChange={event => setPublicationDate(event.target.value)}/>
-                </label>
+                <InputComponent 
+                    label="Tytuł" 
+                    state={title} 
+                    setState={setTitle}
+                />
+                <InputComponent 
+                    label="Autor" 
+                    state={author} 
+                    setState={setAuthor}
+                />
+                <InputComponent 
+                    label="Rok publikacji" 
+                    state={publicationDate} 
+                    setState={setPublicationDate}
+                    type="number"
+                />
                 <br/>
                 <GenreDropdown/>
                 <br/>
